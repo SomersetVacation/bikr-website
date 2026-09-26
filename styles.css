@@ -118,6 +118,28 @@ p { margin-top: 0; }
 .feature-cards h3 { margin: 62px 0 16px; font-size: 1.35rem; }
 .feature-cards p { color: #686b6d; font-size: .93rem; }
 
+.product-progress { padding-block: 145px; border-top: 1px solid var(--line); }
+.progress-heading { display: grid; grid-template-columns: 1.05fr .95fr; gap: 90px; align-items: end; margin-bottom: 70px; }
+.progress-heading h2 { font-size: clamp(2.7rem, 5vw, 5rem); }
+.progress-heading > p { max-width: 520px; margin: 0 0 8px; color: var(--muted); font-size: 1.02rem; }
+.progress-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.progress-panel { padding: clamp(30px, 4vw, 52px); border: 1px solid #30363c; background: #0e1114; }
+.available-panel { border-color: rgba(255, 90, 31, .58); background: linear-gradient(145deg, rgba(255,90,31,.1), #0e1114 44%); }
+.progress-label { color: var(--orange); font-size: .66rem; font-weight: 800; letter-spacing: .16em; }
+.progress-dot { display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 50%; background: #72cd91; box-shadow: 0 0 0 5px rgba(114,205,145,.1); }
+.progress-panel > h3 { margin: 22px 0 34px; font-size: clamp(2rem, 3vw, 3.2rem); letter-spacing: -.04em; }
+.progress-list, .roadmap-list { margin: 0; padding: 0; list-style: none; }
+.progress-list li { position: relative; padding: 17px 0 17px 28px; border-top: 1px solid var(--line); }
+.progress-list li::before { content: "✓"; position: absolute; left: 0; top: 17px; color: #72cd91; font-weight: 800; }
+.progress-list strong, .progress-list span { display: block; }
+.progress-list strong { font-size: .88rem; }
+.progress-list span { margin-top: 3px; color: var(--muted); font-size: .78rem; }
+.progress-note { margin: 28px 0 0; padding: 14px 16px; border-left: 2px solid var(--orange); background: rgba(255,255,255,.035); color: #aeb4ba; font-size: .72rem; }
+.roadmap-list li { display: grid; grid-template-columns: 38px 1fr; gap: 16px; padding: 17px 0; border-top: 1px solid var(--line); }
+.roadmap-list li > span { color: var(--orange); font: 600 .68rem "Space Grotesk"; }
+.roadmap-list strong { font-family: "Space Grotesk", Manrope, sans-serif; font-size: .91rem; }
+.roadmap-list p { margin: 5px 0 0; color: var(--muted); font-size: .78rem; }
+
 .dealers { display: grid; grid-template-columns: .78fr 1.22fr; gap: 80px; align-items: center; padding-block: 150px; }
 .dealer-copy h2 { font-size: clamp(2.55rem, 4.5vw, 4.5rem); }
 .dealer-copy > p:not(.kicker) { margin: 30px 0; color: var(--muted); }
@@ -211,6 +233,8 @@ p { margin-top: 0; }
   .site-header.menu-open .desktop-nav { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 0; padding-top: 18px; }
   .site-header.menu-open .desktop-nav a { padding: 14px 0; border-top: 1px solid var(--line); }
   .intro, .passport-showcase, .dealers, .pricing { grid-template-columns: 1fr; }
+  .progress-heading, .progress-grid { grid-template-columns: 1fr; }
+  .progress-heading { gap: 28px; }
   .intro { gap: 20px; }
   .passport-showcase { gap: 90px; }
   .dealers { gap: 80px; }
@@ -236,7 +260,7 @@ p { margin-top: 0; }
   .intro-copy { padding-top: 10px; }
   .passport-showcase { padding-bottom: 100px; }
   .phone { min-height: 720px; border-radius: 34px; }
-  .feature-band-inner, .dealers, .pricing { padding-block: 100px; }
+  .feature-band-inner, .product-progress, .dealers, .pricing { padding-block: 100px; }
   .feature-cards { grid-template-columns: 1fr; }
   .feature-cards article { min-height: 270px; }
   .feature-cards h3 { margin-top: 40px; }
