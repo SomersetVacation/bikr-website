@@ -284,3 +284,39 @@ p { margin-top: 0; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; }
 }
+
+/* ---- Photo + video update (8 Nov 2026) ---- */
+.hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 63% center; }
+.ride-triptych { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 70px; }
+.ride-triptych figure { position: relative; margin: 0; aspect-ratio: 4 / 3.4; overflow: hidden; background: #111; }
+.ride-triptych img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.2s cubic-bezier(.2,.7,.2,1); }
+.ride-triptych figure:hover img { transform: scale(1.05); }
+.ride-triptych figcaption { position: absolute; inset: auto 0 0; padding: 70px 26px 24px; background: linear-gradient(0deg, rgba(5,6,7,.92), rgba(5,6,7,0)); color: #fff; }
+.ride-triptych figcaption b { display: block; font: 700 1.55rem "Space Grotesk", sans-serif; letter-spacing: -.03em; }
+.ride-triptych figure:last-child figcaption b { color: var(--orange); }
+.ride-triptych figcaption span { display: block; margin-top: 4px; color: #c9cdd2; font-size: .86rem; }
+.ride-triptych + .feature-cards { margin-top: 14px; }
+.bike-photo { background: linear-gradient(0deg, rgba(9,11,13,.85) 0%, rgba(9,11,13,0) 40%), url("assets/xdiavel.webp") 50% 50% / cover; }
+.bike-photo::after, .bike-line { display: none; }
+.bike-photo span { color: #e6e8ea; }
+.photo-band { position: relative; min-height: 620px; display: flex; align-items: center; background: url("assets/pocket.webp") 30% center / cover; }
+.photo-band::before { content: ""; position: absolute; inset: 0; background: linear-gradient(270deg, rgba(4,5,6,.95) 0%, rgba(4,5,6,.75) 42%, rgba(4,5,6,.05) 75%), linear-gradient(0deg, #090b0d 0%, transparent 20%), linear-gradient(180deg, #090b0d 0%, transparent 20%); }
+.photo-band-inner { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-end; text-align: right; }
+.photo-band h2 { max-width: 700px; }
+.photo-band-inner > p:last-child { max-width: 460px; margin: 26px 0 0; color: #c3c8ce; }
+@media (max-width: 920px) {
+  .ride-triptych { grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+  .ride-triptych figcaption { padding: 50px 14px 14px; }
+  .ride-triptych figcaption b { font-size: 1.1rem; }
+  .ride-triptych figcaption span { display: none; }
+}
+@media (max-width: 640px) {
+  .hero-video { object-position: 67% center; }
+  .ride-triptych { grid-template-columns: 1fr; gap: 10px; margin-top: 46px; }
+  .ride-triptych figure { aspect-ratio: 16 / 10; }
+  .ride-triptych figcaption span { display: block; }
+  .photo-band { min-height: 560px; align-items: flex-end; padding-bottom: 60px; background-position: 22% center; }
+  .photo-band::before { background: linear-gradient(0deg, rgba(4,5,6,.96) 10%, rgba(4,5,6,.3) 70%), linear-gradient(180deg, #090b0d 0%, transparent 20%); }
+  .photo-band-inner { align-items: flex-start; text-align: left; }
+  }
+@media (prefers-reduced-motion: reduce) { .hero-video { display: none; } .ride-triptych img { transition: none; } }

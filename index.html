@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260926-1">
+  <link rel="stylesheet" href="styles.css?v=20261108-1">
 </head>
 <body>
   <header class="site-header" id="top">
@@ -33,7 +33,11 @@
 
   <main>
     <section class="hero">
-      <div class="hero-image" role="img" aria-label="Adventure motorcycle on a mountain road at sunrise"></div>
+      <div class="hero-image" role="img" aria-label="Adventure motorcycle on a mountain road at sunrise">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/bikr-hero.webp" aria-hidden="true">
+          <source src="assets/bikr-hero-loop.mp4" type="video/mp4">
+        </video>
+      </div>
       <div class="hero-shade"></div>
       <div class="hero-content">
         <div class="eyebrow"><span></span> The motorcycle ownership platform</div>
@@ -74,7 +78,7 @@
           <span>MY GARAGE</span>
         </div>
         <div class="bike-title">
-          <div><small>2023</small><h3>Beta 390 RR</h3></div>
+          <div><small>2026</small><h3>Ducati XDiavel V4</h3></div>
           <span class="verified">✓ VERIFIED</span>
         </div>
         <div class="odometer"><span>Current odometer</span><strong>4,619 <small>km</small></strong></div>
@@ -82,7 +86,7 @@
           <div><span>Service</span><strong>Up to date</strong></div>
           <div><span>Next due</span><strong>381 km</strong></div>
           <div><span>Records</span><strong>12</strong></div>
-          <div><span>Ownership</span><strong>2 owners</strong></div>
+          <div><span>Ownership</span><strong>1st owner</strong></div>
         </div>
         <div class="timeline-mini">
           <p><i></i><span><b>Full service</b><small>4,500 km · Workshop verified</small></span></p>
@@ -108,6 +112,14 @@
         <div>
           <p class="kicker">DESIGNED FOR OWNERSHIP</p>
           <h2>Ride it. Maintain it.<br><em>Prove it.</em></h2>
+        </div>
+        <div class="ride-triptych">
+          <figure><img src="assets/ride-900.webp" srcset="assets/ride-900.webp 900w, assets/ride.webp 1376w" sizes="(max-width: 640px) 100vw, 33vw" alt="Rider on a red Ducati XDiavel V4 leaning into a bend on an Australian hinterland road at golden hour" loading="lazy" style="object-position: 58% 60%">
+            <figcaption><b>Ride it.</b><span>Every kilometre becomes part of the bike's story.</span></figcaption></figure>
+          <figure><img src="assets/maintain-900.webp" srcset="assets/maintain-900.webp 900w, assets/maintain.webp 1920w" sizes="(max-width: 640px) 100vw, 33vw" alt="Gloved hand checking a motorcycle chain next to an open service book" loading="lazy" style="object-position: 40% 50%">
+            <figcaption><b>Maintain it.</b><span>Services, parts and receipts, logged as you go.</span></figcaption></figure>
+          <figure><img src="assets/prove-900.webp" srcset="assets/prove-900.webp 900w, assets/prove.webp 1920w" sizes="(max-width: 640px) 100vw, 33vw" alt="A motorcycle key and service book being handed to a new owner at dusk" loading="lazy" style="object-position: 50% 50%">
+            <figcaption><b>Prove it.</b><span>Hand over the keys&mdash;and the whole history.</span></figcaption></figure>
         </div>
         <div class="feature-cards">
           <article>
@@ -202,6 +214,14 @@
         <li><span>03</span><h3>Bikr records</h3><p>The ownership event is added to the bike timeline with a clear audit trail.</p></li>
         <li><span>04</span><h3>Private stays private</h3><p>Personal routes, notes, preferences and rider history remain with the seller.</p></li>
       </ol>
+    </section>
+
+    <section class="photo-band" aria-label="The Bikr passport on a phone next to a motorcycle">
+      <div class="photo-band-inner section">
+        <p class="kicker">BUILT BY RIDERS, FOR RIDERS</p>
+        <h2>Your bike's whole story.<br><em>In your pocket.</em></h2>
+        <p>From the first ride to the next owner&mdash;every service, part and kilometre, ready when you need it.</p>
+      </div>
     </section>
 
     <section class="pricing section" id="pricing">
